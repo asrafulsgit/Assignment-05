@@ -1,64 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+     --color : rgba(0, 48, 60, 1);
+     --body-bg: rgba(244, 247, 255, 1);
+}
+
+
+
 * {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     font-family: 'Inter', sans-serif;
+     font-family: "Poppins", sans-serif;
  }
  body {
-     background: #f8faff;
-     padding: 20px;
+     background:var(--body-bg);
+     padding-top: 20px;
  }
  .container {
-     max-width: 1200px;
+     padding: 0 60px;
      margin: auto;
  }
- .dashboard {
-     background: white;
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
- .header {
+ .container header nav{
      display: flex;
      justify-content: space-between;
      align-items: center;
+     background-color: white;
+     padding: 24px;
+     border-radius: 16px;
  }
- .header h1 {
+ .container header .logo{
+     display: flex;
+     gap: 0.5rem;
+     align-items: center;
+ }
+.container header .logo img{
+     height: 50px;
+     width: 50px;
+}
+.container header .logo h1{
+     color: rgba(0, 48, 60, 1);
+     font-weight: 300;
+     font-size: 32px;
+}
+.container header .logo h1 span{
      font-weight: 600;
- }
- .tasks {
-     display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-     gap: 20px;
+}
+.container header .theme{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 2rem;
+}
+.container header .theme .count{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+     /* border: 1px solid; */
+     border-radius: 32px;
+     background-color: var(--body-bg);
+     padding: 6px 20px;
+}
+.container header .theme .count img{
+      
+}
+.container header .theme .count p{
+     font-size: 32px ;
+     font-weight: bold;
+}
+
+.container header .theme .theme-btn button{
+     padding: 12px;
+     border-radius: 50%;
+     background-color: var(--body-bg);
+     border: none;
+     display: flex;
+     cursor: pointer;
+}
+.container header .theme .theme-btn button img{
+     width: 36px;
+     height: 36px;
+}
+.container .dashboard{
+     display: flex;
+}
+.container .dashboard .task-body{
+     width: 80%;
+     padding: 24px;
+     /* border: 1px solid; */
+     background-color: white;
+     border-radius: 16px;
      margin-top: 20px;
- }
- .task-card {
-     background: white;
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
- }
- .task-card h3 {
-     font-size: 18px;
+}
+.container .dashboard .completed-task{
+     width: 20%;
+}
+.container .taks-header{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 24px;
+     margin-bottom: 24px;
+}
+
+.container .taks-header .task-assigned{
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     color:rgba(0, 48, 60, 1) ;
+     padding: 18px 26px;
+     border-radius:12px ;
+     background-color: rgba(244, 247, 255, 1);
+}
+.container .taks-header .task-assigned .task-text{
+     font-size: 16px;
+     font-weight: 400;
+}
+.container .taks-header .task-assigned .task-counter{
      font-weight: 600;
- }
- .task-card p {
-     font-size: 14px;
-     color: gray;
-     margin: 10px 0;
- }
- .task-card .deadline {
-     font-size: 12px;
-     color: black;
-     font-weight: 600;
- }
- .completed {
-     background: #5a47fb;
+     font-size: 32px;
+}
+.container .taks-header .board{
+     padding: 20px 32px;
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     border-radius: 12px;
+     background: linear-gradient(to right, rgba(55, 82, 253, 1), rgba(108, 127, 250, 1),rgba(155, 168, 248, 1));
+}
+.container .taks-header .board img{
+     width: 56px;
+     height: 64px;
+     object-fit: cover;
+}
+.container .taks-header .board p{
+     font-size: 22px;
+     font-weight: 500;
      color: white;
-     padding: 5px 10px;
-     border-radius: 5px;
-     font-size: 12px;
-     text-align: center;
-     width: fit-content;
-     margin-top: 10px;
+     padding-right: 15px;
+}
+.container .taks-header .taks-date{
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     padding: 20px ;
+     border-radius: 12px;
+     background-color: rgba(244, 247, 255, 1);
+}
+.container .taks-header .taks-date div{
+     color: var(--color);
+}
+.container .taks-header .taks-date div .full-year{
+     font-weight: bold;
+     font-size: 22px;
+}
+.container .taks-header .taks-date div .day{
+     font-size: 16px;
+}
+.container .dashboard .task-body .task-body-hr{
+     border: none;
+     border-bottom: 0.8px dashed rgba(55, 82, 253, 0.2);
+}
+
+.container .dashboard .task-body .tasks {
+     margin-top: 24px;
+     display: grid;
+     grid-template-columns: auto auto auto;
+     gap: 20px;
+     /* border: 1px solid; */
  }
+ .container .dashboard .task-body .task-card {
+     background: var(--body-bg);
+     padding: 24px;
+     border-radius: 16px;
+ }
+ .container .task-body .task-card .small-title{
+     padding: 8px 16px;
+     border-radius: 8px;
+     background-color: white;
+     display: inline;
+     color: rgba(0, 48, 60, 1);
+     font-size: 16px;
+     font-weight: 400;
+ }
+.container .task-body .task-card .title {
+      color: var(--color);
+      font-size: 20px;
+      font-weight: 500;
+      margin-top: 20px;
+ }
+ .container .task-body .task-card .description{
+     padding: 14px;
+     margin-top: 16px;
+     font-size: 14px;
+     font-weight: 400;
+     opacity: 0.5;
+     background-color: var(--body-bg);
+ }
+ .container .task-body .task-card .task-card-footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: end;
+     margin-top: 16px;
+     padding-top: 12px;
+     border-top: 1px dashed rgba(55, 82, 253, 0.2);
+ }
+ .container .task-body .task-card .task-card-footer .deadline .deadline-text {
+     opacity: 0.7;
+     font-weight: 400;
+     font-size: 14px;
+     color: var(--color);
+ }
+ .container .task-body .task-card .task-card-footer .deadline .deadline-date {
+     font-size: 14px;
+     font-weight: 500;
+     color: var(--color);
+ }
+ .container .task-body .task-card .task-card-footer  .complete-btn {
+     padding: 8px 16px;
+     background-color: rgba(55, 82, 253, 1);
+     border-radius: 8px;
+     border: none;
+     font-size: 14px;
+     font-weight: 500;
+     color: white;
+ }
+ 
+ 
