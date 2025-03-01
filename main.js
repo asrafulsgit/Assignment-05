@@ -130,7 +130,16 @@ const {day,month,year,date} = todayDate
 document.querySelector('#today-day').textContent = day
 document.querySelector('#full-year').textContent = `${month} ${date <10 ? `0${date}` : date} ${year}`
 
+const themeBtn = document.querySelector('#theme-btn')
+const body = document.querySelector('body')
+themeBtn.addEventListener('click',function(){
+  body.style.backgroundColor = getGenerateRandomColor();
+})
 
 
+const boardPage = document.querySelector('#blog-page')
+boardPage.addEventListener('click',function(){
+  window.location.href = '/blog.html'; 
+})
 
 
