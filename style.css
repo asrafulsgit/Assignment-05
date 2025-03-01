@@ -57,7 +57,6 @@
      justify-content: center;
      align-items: center;
      gap: 1rem;
-     /* border: 1px solid; */
      border-radius: 32px;
      background-color: var(--body-bg);
      padding: 6px 20px;
@@ -89,7 +88,6 @@
 .container .dashboard .task-body{
      width: 73%;
      padding: 20px;
-     /* border: 1px solid; */
      background-color: white;
      border-radius: 16px;
      margin-top: 20px;
@@ -171,7 +169,6 @@
      display: grid;
      grid-template-columns: auto auto auto;
      gap: 16px;
-     /* border: 1px solid; */
  }
  .container .dashboard .task-body .task-card {
      background: var(--body-bg);
@@ -234,7 +231,6 @@
  .container .dashboard .completed-task{
      background-color: white;
      padding: 24px 0;
-     /* border: 1px solid; */
      border-radius: 16px;
      margin-top: 20px;
  }
@@ -247,7 +243,6 @@
  }
  .container .dashboard .completed-task .completed-task-header .text-log{
      display: flex;
-     /* gap: 17px; */
      justify-content: center;
      align-items: center;
      color: var(--color);
