@@ -25,7 +25,7 @@
           <div class="theme">
             <div class="count">
               <img src="./assets/checkbox.png" alt="checkbox" />
-              <p>10</p>
+              <p id="total-completed-task">10</p>
             </div>
             <div class="theme-btn">
               <button>
@@ -38,11 +38,11 @@
       <div class="dashboard">
            <section class="task-body">
              <div class="taks-header">
-               <div class="task-assigned">
+               <div class="task-assigned" >
                  <img src="./assets/checkbox.png" alt="checkbox" />
                  <div>
                    <p class="task-text">Task Assigned</p>
-                   <p class="task-counter">02</p>
+                   <p class="task-counter" id="uncompleted">02</p>
                  </div>
                </div>
                <div class="board">
@@ -55,14 +55,14 @@
                <div class="taks-date">
                  <img src="./assets/calender.png" alt="calender" />
                  <div>
-                   <p class="day">Wed</p>
-                   <p class="full-year">Jul 28 2025</p>
+                   <p class="day" id="today-day">Wed</p>
+                   <p class="full-year" id="full-year">Jul 28 2025</p>
                  </div>
                </div>
              </div>
               <hr class="task-body-hr"> 
-             <div class="tasks">
-               <div class="task-card">
+             <div class="tasks" id="tasks">
+               <!-- <div class="task-card">
                <p class="small-title">ShopEase</p>
                  <h3 class="title">Fix Mobile Button Issue</h3>
                  <p class="description">
@@ -106,13 +106,25 @@
                     </div>
                     <button class="complete-btn">Completed</button>
                  </div>
-               </div>
+               </div> -->
              </div>
            </section>
            <aside class="completed-task">
-               <h1>hello</h1>
-           </aside>
+                <div class="completed-task-header">
+                   <div class="text-log">
+                    <img src="./assets/activity.png" alt="activity">
+                    <p>Activity Log</p> <br>
+                   </div>
+                   <button id="clear-history-btn">Clear History</button>
+                </div>
+                <hr class="task-body-hr">
+                <div class="completed-tasks-body" id="completed-tasks">
+                  
+                </div>
+            </aside>
       </div>
     </div>
+    <script src="utils/service.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
